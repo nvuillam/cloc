@@ -1,2 +1,4 @@
 cloc-?.??.*
 release_notes-?.??.txt
+*.log
+report/
