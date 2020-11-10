@@ -123,7 +123,7 @@ sub load_yaml { # {{{1
         warn "File not found: $file\n";
         return %result;
     }
-    open IN, $file or return %result;
+    open my IN, "<:encoding(UTF-8)", $file or return %result;
     my $section = undef;
     while (<IN>) {
         next if /^\s*#/ or /^--/;
