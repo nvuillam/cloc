@@ -992,9 +992,9 @@ sub load_yaml { # {{{1
         warn "File not found: $file\n";
         return %result;
     }
-    open my IN, '<:encoding(UTF-8)', $file or return %result;
+    open my $in, '<:encoding(UTF-8)', $file or return %result;
     my $section = undef;
-    while (<IN>) {
+    while (<$in>) {
         next if /^\s*#/ or /^--/;
         if (/^\s*'?(.*?)'?\s*:\s*$/) {
             $section = $1;
@@ -1008,6 +1008,6 @@ sub load_yaml { # {{{1
         $K =~ s/'//g;
         $result{$section}{$K} = $V;
     }
-    close IN;
+    close $in;
     return %result
 } # 1}}}
