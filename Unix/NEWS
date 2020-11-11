@@ -230,9 +230,9 @@ Bug Fixes:
       handles such filename mangling
     o Remove debug die() invocation in make_file_list().
     o Fix improperly formatted JSON emitted with --by-file-by-lang.
-    o Improve accuracy of C#/Smalltalk disambuguator (was biased toward
+    o Improve accuracy of C#/Smalltalk disambiguator (was biased toward
       counting .cs files as Smalltalk).
-    o Improve accuracy of TypeScript/Qt Linguist disambuguator.
+    o Improve accuracy of TypeScript/Qt Linguist disambiguator.
     o More robust YAML output by quoting file and language names.
     o Handle more unusual file names with --git --diff
 
