@@ -1,7 +1,7 @@
 # Dockerfile by Sébastien HOUZÉ, https://github.com/shouze
 FROM perl:slim
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install --no-install-recommends -y \
     unzip \
     git \
  && rm -rf /var/lib/apt/lists/*
